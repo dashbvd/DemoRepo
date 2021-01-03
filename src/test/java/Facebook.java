@@ -16,10 +16,15 @@ public class Facebook {
     }
 
 
-    @Test
+    @Test(priority = 1)
     public void foo_1(){
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
+    }
+
+    @Test(priority = 2)
+    public void foo_2(){
+        System.out.println(driver.getCurrentUrl());
     }
 
 
